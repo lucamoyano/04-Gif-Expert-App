@@ -1,0 +1,46 @@
+import React from 'react'
+import {GifGridItem} from './GifGridItem';
+import { getGifs } from '../helpers/getGifs';
+import { useFetchGifs } from '../hooks/useFetchGifs';
+
+export const GifGrid = ( {category} ) => {
+
+    //const [images, setImages] = useState([]);
+
+    // useEffect(() => {
+    //     getGifs( category )
+    //         //.then( imgs => setImages( imgs ) ); 
+    //         //Como es una funcion que envia su primer argumento como primer argumento a la funcion
+    //         //Se puede utilizar de la siguiente manera:
+    //         .then( setImages );
+    // }, [category]); 
+    // //Le pasamod un arreglo vacio como segundo argumento
+    // //Para decirle que se ejecute una sola vez
+
+    const { data, loading } = useFetchGifs();
+
+    return (
+        <>
+        <h3>{category}</h3>
+        <div className="card-grid">
+            {/* {
+                images.map( ({id, title}) => (
+                        <li key={id}> {title} </li>
+                    )
+                )
+            } */}
+
+            {/* {
+                images.map( img => (
+                    // <GifGridItem img={ img } />
+                    <GifGridItem 
+                        key={img.id}
+                        { ...img }  //Le paso las props mediante desetructuracion
+                    />
+                    )
+                )
+            } */}
+        </div>
+        </>
+    )
+}
