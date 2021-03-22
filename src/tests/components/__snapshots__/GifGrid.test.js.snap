@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en componente GifGrid debe de mostrar items cuando se cargan imagenes useFetchGifs 1`] = `
+<Fragment>
+  <h3>
+    Goku
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="ABC"
+      key="ABC"
+      title="Test"
+      url="https://url.com/image.png"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Pruebas en componente GifGrid debe mostrar el componente GifGrid correctamente 1`] = `
+<Fragment>
+  <h3>
+    Goku
+  </h3>
+  <p>
+    Cargando
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
